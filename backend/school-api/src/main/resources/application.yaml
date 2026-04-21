@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: school-management-app
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/schooldb
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: Zm9vYmFyZm9vYmFyZm9vYmFyZm9vYmFyZm9vYmFyZm9vYmFy
+      expiration: 86400000
+
+server:
+  port: 8080
